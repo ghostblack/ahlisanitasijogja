@@ -7,7 +7,7 @@ import Documentation from './components/Documentation.tsx';
 import Area from './components/Area.tsx';
 import Footer from './components/Footer.tsx';
 
-const App: React.FC = () => {
+function App() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -37,6 +37,6 @@ const App: React.FC = () => {
       </a>
     </div>
   );
-};
+}
 
 export default App;

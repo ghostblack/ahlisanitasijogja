@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const Area: React.FC = () => {
+function Area() {
   const areas = [
     { name: 'Jogja/Kota' },
     { name: 'Sleman' },
@@ -14,7 +14,6 @@ const Area: React.FC = () => {
     <section id="area" className="py-16 md:py-32 px-4 md:px-10 lg:px-20 bg-white">
       <div className="max-w-[1440px] mx-auto reveal">
         <div className="relative bg-[#064E3B] rounded-[32px] md:rounded-[40px] py-12 md:py-20 px-6 md:px-8 overflow-hidden shadow-2xl">
-          {/* Decorative shapes (abstract circles from the image) */}
           <div className="absolute top-0 right-0 w-48 h-48 md:w-64 md:h-64 bg-black/10 rounded-full -mr-16 -mt-16 md:-mr-20 md:-mt-20"></div>
           <div className="absolute bottom-0 left-0 w-32 h-32 md:w-48 md:h-48 bg-black/10 rounded-full -ml-12 -mb-12 md:-ml-16 md:-mb-16"></div>
 
@@ -23,7 +22,6 @@ const Area: React.FC = () => {
               Jangkauan Wilayah Kami
             </h2>
 
-            {/* Areas Grid - Optimized for Mobile */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-wrap justify-center items-start gap-8 md:gap-16 lg:gap-24 mb-12 md:mb-20">
               {areas.map((area, index) => (
                 <div 
@@ -46,7 +44,6 @@ const Area: React.FC = () => {
               ))}
             </div>
 
-            {/* CTA Button - Enhanced Mobile Proportions */}
             <div className="flex justify-center px-2">
               <a 
                 href="https://wa.me/6285641585196"
@@ -63,6 +60,6 @@ const Area: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Area;
