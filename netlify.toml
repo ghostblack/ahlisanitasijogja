@@ -1,17 +1,7 @@
 
 [build]
-  publish = "."
-  command = ""
-
-[[headers]]
-  for = "/*.tsx"
-  [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/*.ts"
-  [headers.values]
-    Content-Type = "application/javascript"
+  command = "npm run build"
+  publish = "dist"
 
 [[redirects]]
   from = "/*"
