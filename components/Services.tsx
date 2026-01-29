@@ -5,38 +5,45 @@ interface ServiceItem {
   title: string;
   description: string;
   image: string;
+  alt: string;
 }
 
 const services: ServiceItem[] = [
   {
     title: "Pembuatan Sumur Bor",
     description: "Pengeboran sumur untuk kebutuhan air bersih rumah tangga maupun industri dengan kedalaman yang disesuaikan.",
-    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/ahlisanitasi1.png?updatedAt=1769515900230"
+    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/ahlisanitasi1.png?updatedAt=1769515900230",
+    alt: "Jasa Pembuatan Sumur Bor Jogja Terdekat"
   },
   {
     title: "Pembuatan Sumur Timba",
     description: "Pembuatan sumur tradisional galian manual dengan struktur yang kokoh dan aman.",
-    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/ahlisanitasi2.png?updatedAt=1769516133738"
+    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/ahlisanitasi2.png?updatedAt=1769516133738",
+    alt: "Tukang Gali Sumur Timba Yogyakarta Profesional"
   },
   {
     title: "Pembuatan Resapan",
     description: "Sistem drainase dan resapan air untuk mencegah genangan dan menjaga kualitas tanah.",
-    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/image3.png"
+    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/image3.png",
+    alt: "Jasa Pembuatan Resapan Air Limbah dan Septic Tank Jogja"
   },
   {
     title: "Sedot WC",
     description: "Layanan kuras septic tank profesional dengan armada yang bersih dan pengerjaan tuntas.",
-    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/image4.png"
+    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/image4.png",
+    alt: "Jasa Sedot WC Jogja Murah Bergaransi - Sleman Bantul Yogyakarta"
   },
   {
     title: "WC & Saluran Mampet",
-    description: "Pembuangan sumur tradisional galian manual dengan struktur yang kokoh dan aman.",
-    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/image5.png"
+    description: "Pelancaran saluran WC mampet dan wastafel mampet tanpa bongkar, cepat dan efisien.",
+    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/image5.png",
+    alt: "Ahli Saluran Mampet Jogja - Solusi WC Tersumbat Yogyakarta"
   },
   {
     title: "Servis Pompa Air",
     description: "Perbaikan berbagai merek pompa air, penggantian spare part, dan optimasi aliran air.",
-    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/image7.png"
+    image: "https://ik.imagekit.io/gambarid/ahlisanitasijogja/image7.png",
+    alt: "Jasa Servis Pompa Air Jogja - Tukang Pompa Panggilan Terdekat"
   }
 ];
 
@@ -63,7 +70,7 @@ const Services: React.FC = () => {
               <div className="relative aspect-video overflow-hidden bg-gray-100">
                 <img 
                   src={service.image} 
-                  alt={`${service.title} - Ahli Sanitasi Jogja Terdekat`} 
+                  alt={service.alt} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                   decoding="async"

@@ -1,16 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
-    <title>Jasa Sedot WC Jogja, Ahli Sumur & Saluran Mampet - Ahli Sanitasi Jogja</title>
-    <meta name="description" content="Jasa sedot WC Jogja terdekat, ahli sumur bor, saluran mampet, dan servis pompa air di Yogyakarta. Melayani wilayah Sleman, Bantul, Gunungkidul, Kulon Progo. Cepat, murah, dan bergaransi.">
-    <meta name="keywords" content="Jasa Sedot WC, Ahli Sumur jogja, jasa sedot wc jogja, saluran mapet jogja, sedot wc bantul, sedot wc gunungkidul, sedot wc terdekat, sedot wc terbaik, sedot wc yogayakarta, sedot wc sleman, jasa pompa air, jasa sumur bor, tukang ledeng jogja, sedot wc murah jogja">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png">
+
+    <!-- SEO Meta Tags Dasar -->
+    <title>Jasa Sedot WC Jogja Terdekat | Saluran Mampet & Ahli Sumur Bor</title>
+    <meta name="description" content="Jasa Sedot WC Jogja terdekat, ahli saluran mampet, dan pembuatan sumur bor di Yogyakarta. Layanan profesional, murah, dan bergaransi untuk wilayah Sleman, Bantul, Kota Jogja, Kulon Progo, dan Gunungkidul.">
+    <meta name="keywords" content="Sedot WC Jogja, Jasa Sedot WC Jogja, Sedot WC terdekat, Sedot WC wilayah Jogja, saluran mampet Jogja, ahli sumur bor Jogja, sedot wc murah jogja, sedot wc sleman, sedot wc bantul, sedot wc kota jogja, tukang sumur jogja, jasa pompa air jogja">
     <meta name="author" content="Ahli Sanitasi Jogja">
+    <link rel="canonical" href="https://ahlisanitasijogja.com" />
     
+    <!-- Open Graph / Facebook (Untuk Branding Sosmed) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahlisanitasijogja.com/">
+    <meta property="og:title" content="Jasa Sedot WC Jogja Terdekat | Saluran Mampet & Ahli Sumur Bor">
+    <meta property="og:description" content="Solusi Sanitasi Profesional di Yogyakarta. Melayani Sedot WC, Saluran Mampet, dan Sumur Bor dengan harga terjangkau dan bergaransi.">
+    <meta property="og:image" content="https://ik.imagekit.io/gambarid/ahlisanitasijogja/gambar1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ahlisanitasijogja.com/">
+    <meta property="twitter:title" content="Jasa Sedot WC Jogja Terdekat | Saluran Mampet & Ahli Sumur Bor">
+    <meta property="twitter:description" content="Layanan Sedot WC dan Sanitasi Profesional di Yogyakarta dan sekitarnya. Cepat, Murah, Bergaransi.">
+    <meta property="twitter:image" content="https://ik.imagekit.io/gambarid/ahlisanitasijogja/gambar1.png">
+
+    <!-- JSON-LD Structured Data (Kunci agar Google tahu ini Bisnis Lokal di Jogja) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ahli Sanitasi Jogja - Jasa Sedot WC & Sumur Bor",
+      "image": "https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png",
+      "@id": "https://ahlisanitasijogja.com",
+      "url": "https://ahlisanitasijogja.com",
+      "telephone": "+6285641585196",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jalan Imogiri Timur KM. 12, Trimulyo, Jetis",
+        "addressLocality": "Bantul",
+        "addressRegion": "DIY",
+        "postalCode": "55781",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -7.8938,
+        "longitude": 110.3912
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.facebook.com/AhliSanitasiJogja",
+        "https://www.instagram.com/ahli_sanitasijogja"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "128"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +92,10 @@
         }
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
         }
         .reveal.active {
             opacity: 1;
@@ -55,14 +124,15 @@
                         entry.target.classList.add('active');
                     }
                 });
-            }, { threshold: 0.1 });
+            }, { threshold: 0.05 });
             
-            const checkInterval = setInterval(() => {
+            const initObserver = () => {
                 const elements = document.querySelectorAll('.reveal:not(.active)');
-                if (elements.length > 0) {
-                    elements.forEach(el => observer.observe(el));
-                }
-            }, 1000);
+                elements.forEach(el => observer.observe(el));
+            };
+
+            initObserver();
+            setInterval(initObserver, 1000);
         });
     </script>
 <script type="importmap">

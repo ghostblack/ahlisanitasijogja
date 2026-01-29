@@ -48,7 +48,6 @@ const Hero: React.FC = () => {
               backgroundImage: `url('${image}')`,
               backgroundPosition: 'center center'
             }} 
-            // Add performance hint for the first image
             {...(index === 0 ? { "data-priority": "high" } : {})}
           />
         ))}
@@ -58,6 +57,7 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 w-full max-w-[1440px] px-6 flex flex-col items-center text-center">
         
+        {/* Badge - Muncul Pertama (Tanpa Delay) */}
         <div className="inline-flex items-center bg-[#105133] text-white px-4 py-1.5 rounded-full mb-8 shadow-xl reveal">
           <div className="mr-2 flex items-center justify-center">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5">
@@ -69,20 +69,20 @@ const Hero: React.FC = () => {
           </span>
         </div>
 
-        {/* Headline */}
-        <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.8rem] font-bold text-white leading-[1.1] tracking-tight mb-8 max-w-[1200px] reveal delay-100">
+        {/* Headline - Muncul Kedua (Delay 300ms) */}
+        <h1 className="text-[2.5rem] md:text-[3.5rem] lg:text-[4.8rem] font-bold text-white leading-[1.1] tracking-tight mb-8 max-w-[1200px] reveal delay-300">
           Solusi <span className="text-[#FDCD01]">Sanitasi Profesional</span> di <br className="hidden md:block" />
           Yogyakarta & Sekitarnya
         </h1>
 
-        {/* Sub-headline */}
-        <p className="text-white text-base md:text-lg lg:text-[21px] font-medium max-w-4xl mx-auto mb-12 opacity-95 leading-[1.8] px-6 reveal delay-200">
+        {/* Sub-headline - Muncul Ketiga (Delay 700ms) */}
+        <p className="text-white text-base md:text-lg lg:text-[21px] font-medium max-w-4xl mx-auto mb-12 opacity-95 leading-[1.8] px-6 reveal delay-700">
           Melayani Sedot WC, Saluran Mampet, dan Sumur bor untuk wilayah Jogja,<br className="hidden md:block" />
           Bantul, Sleman, Kulon Progo, hingga Gunungkidul.
         </p>
 
-        {/* Primary Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 reveal delay-300">
+        {/* Buttons - Muncul Terakhir (Delay 1000ms) */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-5 reveal delay-1000">
           <a 
             href="https://wa.me/6285641585196" 
             className="w-full sm:w-auto h-[54px] flex items-center justify-center bg-[#1E4DB7] text-white px-8 rounded-md font-bold text-base shadow-xl hover:brightness-110 transition-all hover:-translate-y-0.5 space-x-3"
@@ -102,8 +102,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Pagination Dots */}
-      <div className="absolute bottom-[40px] inset-x-0 z-20 flex justify-center items-center gap-4 reveal delay-500">
+      <div className="absolute bottom-[40px] inset-x-0 z-20 flex justify-center items-center gap-4 reveal delay-[1200ms]">
         {images.map((_, index) => (
           <div 
             key={index}
