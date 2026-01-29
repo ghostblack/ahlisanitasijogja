@@ -1,17 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png">
-    <link rel="apple-touch-icon" href="https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png">
-
     <!-- SEO Meta Tags -->
-    <title>Jasa Sedot WC saluran mampet dan ahli sumur bor - Ahli Sanitasi Jogja</title>
-    <meta name="description" content="Jasa Sedot WC saluran mampet dan ahli sumur bor profesional di Yogyakarta. Melayani Sleman, Bantul, Gunungkidul, Kulon Progo. Cepat, murah, dan bergaransi.">
-    <meta name="keywords" content="Jasa Sedot WC, saluran mampet, ahli sumur bor, sedot wc jogja, jasa sumur bor jogja, saluran mampet jogja, sedot wc bantul, sedot wc sleman, tukang sumur jogja, ahli sanitasi jogja">
+    <title>Jasa Sedot WC Jogja, Ahli Sumur & Saluran Mampet - Ahli Sanitasi Jogja</title>
+    <meta name="description" content="Jasa sedot WC Jogja terdekat, ahli sumur bor, saluran mampet, dan servis pompa air di Yogyakarta. Melayani wilayah Sleman, Bantul, Gunungkidul, Kulon Progo. Cepat, murah, dan bergaransi.">
+    <meta name="keywords" content="Jasa Sedot WC, Ahli Sumur jogja, jasa sedot wc jogja, saluran mapet jogja, sedot wc bantul, sedot wc gunungkidul, sedot wc terdekat, sedot wc terbaik, sedot wc yogayakarta, sedot wc sleman, jasa pompa air, jasa sumur bor, tukang ledeng jogja, sedot wc murah jogja">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Ahli Sanitasi Jogja">
     <link rel="canonical" href="https://ahlisanitasijogja.com/">
@@ -19,15 +16,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ahlisanitasijogja.com/">
-    <meta property="og:title" content="Jasa Sedot WC saluran mampet dan ahli sumur bor">
-    <meta property="og:description" content="Solusi sanitasi profesional di Yogyakarta. Melayani sedot WC, saluran mampet, dan sumur bor dengan harga terjangkau.">
+    <meta property="og:title" content="Jasa Sedot WC Jogja & Ahli Sumur Bor Terpercaya">
+    <meta property="og:description" content="Solusi sanitasi profesional di Yogyakarta. Melayani sedot WC, sumur bor, dan saluran mampet dengan harga terjangkau dan hasil maksimal.">
     <meta property="og:image" content="https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ahlisanitasijogja.com/">
-    <meta property="twitter:title" content="Jasa Sedot WC saluran mampet dan ahli sumur bor">
-    <meta property="twitter:description" content="Ahli sanitasi terpercaya di Jogja. Jasa Sedot WC, saluran mampet, dan ahli sumur bor profesional.">
+    <meta property="twitter:title" content="Jasa Sedot WC Jogja & Ahli Sumur Bor">
+    <meta property="twitter:description" content="Ahli sanitasi terpercaya di Jogja. Sedot WC, saluran mampet, dan jasa sumur bor profesional.">
     <meta property="twitter:image" content="https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png">
 
     <!-- JSON-LD Structured Data (Schema.org) -->
@@ -96,13 +93,11 @@
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Performance Optimization: Content Visibility */
         section {
             content-visibility: auto;
             contain-intrinsic-size: 1px 500px;
         }
         
-        /* Hero section must always be visible immediately */
         section:first-of-type {
             content-visibility: visible;
         }
@@ -111,12 +106,11 @@
             gap: 1.618rem;
         }
 
-        /* Faster, smoother Reveal Animation */
         .reveal {
             opacity: 0;
-            transform: translateY(15px); /* Reduced distance for lighter calculation */
+            transform: translateY(15px);
             transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-            backface-visibility: hidden; /* Force GPU acceleration */
+            backface-visibility: hidden;
             perspective: 1000px;
         }
         
@@ -125,7 +119,6 @@
             transform: translateY(0);
         }
 
-        /* Delay classes with lighter footprint */
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 150ms; }
         .delay-300 { transition-delay: 200ms; }
@@ -150,7 +143,6 @@
             }
         }
 
-        // Optimized Intersection Observer
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
                 threshold: 0.1,
@@ -172,7 +164,6 @@
                 document.querySelectorAll('.reveal:not(.active)').forEach(el => observer.observe(el));
             };
 
-            // Using RequestIdleCallback for non-critical initialization
             if (window.requestIdleCallback) {
                 requestIdleCallback(() => initObserver());
             } else {
@@ -195,7 +186,6 @@
 </head>
 <body>
     <div id="root"></div>
-    <!-- Script module explicitly added for Netlify and direct browser loading -->
-    <script type="module" src="index.tsx"></script>
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
