@@ -9,121 +9,32 @@
     <title>Jasa Sedot WC Jogja, Ahli Sumur & Saluran Mampet - Ahli Sanitasi Jogja</title>
     <meta name="description" content="Jasa sedot WC Jogja terdekat, ahli sumur bor, saluran mampet, dan servis pompa air di Yogyakarta. Melayani wilayah Sleman, Bantul, Gunungkidul, Kulon Progo. Cepat, murah, dan bergaransi.">
     <meta name="keywords" content="Jasa Sedot WC, Ahli Sumur jogja, jasa sedot wc jogja, saluran mapet jogja, sedot wc bantul, sedot wc gunungkidul, sedot wc terdekat, sedot wc terbaik, sedot wc yogayakarta, sedot wc sleman, jasa pompa air, jasa sumur bor, tukang ledeng jogja, sedot wc murah jogja">
-    <meta name="robots" content="index, follow">
     <meta name="author" content="Ahli Sanitasi Jogja">
-    <link rel="canonical" href="https://ahlisanitasijogja.com/">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ahlisanitasijogja.com/">
-    <meta property="og:title" content="Jasa Sedot WC Jogja & Ahli Sumur Bor Terpercaya">
-    <meta property="og:description" content="Solusi sanitasi profesional di Yogyakarta. Melayani sedot WC, sumur bor, dan saluran mampet dengan harga terjangkau dan hasil maksimal.">
-    <meta property="og:image" content="https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ahlisanitasijogja.com/">
-    <meta property="twitter:title" content="Jasa Sedot WC Jogja & Ahli Sumur Bor">
-    <meta property="twitter:description" content="Ahli sanitasi terpercaya di Jogja. Sedot WC, saluran mampet, dan jasa sumur bor profesional.">
-    <meta property="twitter:image" content="https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png">
-
-    <!-- JSON-LD Structured Data (Schema.org) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Ahli Sanitasi Jogja",
-      "image": "https://ik.imagekit.io/gambarid/ahlisanitasijogja/amin.png",
-      "@id": "https://ahlisanitasijogja.com/",
-      "url": "https://ahlisanitasijogja.com/",
-      "telephone": "+6285641585196",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jalan Imogiri Timur KM. 12, Trimulyo, Jetis",
-        "addressLocality": "Bantul",
-        "addressRegion": "DIY",
-        "postalCode": "55781",
-        "addressCountry": "ID"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -7.893245,
-        "longitude": 110.384567
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      "sameAs": [
-        "https://www.facebook.com/AhliSanitasiJogja",
-        "https://www.instagram.com/ahli_sanitasijogja"
-      ],
-      "areaServed": [
-        "Yogyakarta",
-        "Sleman",
-        "Bantul",
-        "Gunungkidul",
-        "Kulon Progo"
-      ]
-    }
-    </script>
-
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Babel Standalone untuk mendukung JSX di browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #FFFFFF;
             color: #111111;
             scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        
-        section {
-            content-visibility: auto;
-            contain-intrinsic-size: 1px 500px;
-        }
-        
-        section:first-of-type {
-            content-visibility: visible;
-        }
-
-        .golden-ratio-gap {
-            gap: 1.618rem;
-        }
-
         .reveal {
             opacity: 0;
-            transform: translateY(15px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-            backface-visibility: hidden;
-            perspective: 1000px;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
         }
-        
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 150ms; }
-        .delay-300 { transition-delay: 200ms; }
-        .delay-400 { transition-delay: 250ms; }
-        .delay-500 { transition-delay: 300ms; }
     </style>
     <script>
         tailwind.config = {
@@ -135,57 +46,43 @@
                         dark: '#111111',
                         white: '#FFFFFF',
                         waBlue: '#1E4DB7'
-                    },
-                    spacing: {
-                        'golden': '1.618rem',
                     }
                 }
             }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -20px 0px'
-            };
-
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        requestAnimationFrame(() => {
-                            entry.target.classList.add('active');
-                        });
-                        observer.unobserve(entry.target);
+                        entry.target.classList.add('active');
                     }
                 });
-            }, observerOptions);
-
-            const initObserver = () => {
-                document.querySelectorAll('.reveal:not(.active)').forEach(el => observer.observe(el));
-            };
-
-            if (window.requestIdleCallback) {
-                requestIdleCallback(() => initObserver());
-            } else {
-                setTimeout(initObserver, 100);
-            }
-
-            const mutationObserver = new MutationObserver(() => initObserver());
-            mutationObserver.observe(document.body, { childList: true, subtree: true });
+            }, { threshold: 0.1 });
+            
+            // Re-run observer because components load dynamically via Babel
+            const checkInterval = setInterval(() => {
+                const elements = document.querySelectorAll('.reveal:not(.active)');
+                if (elements.length > 0) {
+                    elements.forEach(el => observer.observe(el));
+                }
+            }, 1000);
         });
     </script>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
 </head>
 <body>
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <script type="text/babel" data-type="module" data-presets="typescript,react" src="./index.tsx"></script>
 </body>
 </html>
