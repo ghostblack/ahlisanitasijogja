@@ -76,7 +76,7 @@ const Hero: React.FC = () => {
         </h1>
 
         {/* Sub-headline - Muncul Ketiga (Delay 700ms) */}
-        <p className="text-white text-base md:text-lg lg:text-[21px] font-medium max-w-4xl mx-auto mb-12 opacity-95 leading-[1.8] px-6 reveal delay-700">
+        <p className="text-white text-base md:text-lg lg:text-[21px] font-medium max-w-4xl mx-auto mb-12 leading-[1.8] px-6 reveal delay-700">
           Melayani Sedot WC, Saluran Mampet, dan Sumur bor untuk wilayah Jogja,<br className="hidden md:block" />
           Bantul, Sleman, Kulon Progo, hingga Gunungkidul.
         </p>
